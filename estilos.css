@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+
+#pag1 h1:nth-child(1) {
+    background-color: gold;
+}
+#pag2 h1:nth-child(2) {
+    background-color:gold;
+}
+#pag3 h1:nth-child(3) {
+    background-color: gold;
+}
+
+nav {
+    width:50%;
+    background-color: lightgray;
+    border-color: black;
+    border-style:solid;
+    border-width:1px;
+}
+
+a {
+    display:inline-block;
+    max-width:25%;
+
+}
+
+h1 {
+    display:inline-block;
+    
+}
+
