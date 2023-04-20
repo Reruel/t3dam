@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pruebas de JS</title>
 </head>
+
 <body>
     <script>
         /*'use strict'
@@ -24,19 +26,32 @@
         console.log(typeof(y));
         document.write('la suma de los valores es:'+suma);*/
 
-            //EJERCICIO 1
-        let x=parseInt(prompt("Ingresa un número"));
-        let y=parseInt (prompt("Ingresa otro número"));
-        for (let a = 0; a < x; a++) {
-            const element = array[x];
-            document.write(y);
-            
-        }
-       
-            //EJERCICIO 2
-            
-            
+        /*EJERCICIO 1
+    let x=parseInt(prompt("Ingresa un número"));
+    let y=parseInt (prompt("Ingresa otro número"));
+    for (let a = 0; a < y; a++) {
+        document.write(x);
+        
+    }*/
+
+        /*-Avanzado-
+    let a=parseInt(prompt("Ingresa un número"));
+    let b=parseInt (prompt("Ingresa otro número"));
+    for (let i = 0; i < b; i++) {
+         if (i % 8 == 0 && i !== 0) {
+    document.write("<br>");
+}
+document.write(a);
+}*/
+
+        //EJERCICIO 2
+
+        for(var i=0; i<=4; i++){
+    for(var x=0; x<=i; x++){
+      pira += i;         }
+    document.getElementById('piramide').value = pira; }
 
     </script>
 </body>
+
 </html>
