@@ -1,0 +1,30 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#exterior {
+    border-style:solid;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-color: purple;
+    background-image: url("C:/xampp/htdocs/t3dam/textura-papel-cuadrados_23-2147786544.avif");
+}
+.columna {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.caja {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-style:solid;
+    border-color: navy;
+    transition: background-color ease-in 0.2s;
+}
