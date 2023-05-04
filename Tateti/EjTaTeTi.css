@@ -5,25 +5,26 @@
 }
 #exterior {
     border-style:solid;
-    width:100vw;
-    height:100vh;
+    width:36vw;
+    height:80vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     border-color: purple;
-    background-image: url("C:/xampp/htdocs/t3dam/textura-papel-cuadrados_23-2147786544.avif");
+    position: absolute;
+    top: 10%;
+    left: 30%;
+     
 }
-.columna {
+.fila {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
 }
-.caja {
+#caja1, #caja2, #caja3, #caja4, #caja5, #caja6, #caja7,#caja8, #caja9 {
     height: 150px;
     width: 150px;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
     border-style:solid;
     border-color: navy;
     transition: background-color ease-in 0.2s;
