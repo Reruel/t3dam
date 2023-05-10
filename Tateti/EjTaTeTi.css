@@ -29,3 +29,43 @@
     border-color: navy;
     transition: background-color ease-in 0.2s;
 }
+
+.tile {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX {
+    color: darkorange;
+}
+
+.playerO {
+    color: rebeccapurple;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+.controls button {
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.restart {
+    background-color: darkred;
+}
+
+#reset {
+    background-color: cornflowerblue;
+}

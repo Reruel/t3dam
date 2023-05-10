@@ -1,67 +1,132 @@
-function pintar(col,caja)
-{
-    document.getElementById(caja).style.backgroundColor=col;
+function pintar(col, caja) {
+  document.getElementById(caja).style.backgroundColor = col;
 }
 
-let contador = 0;
-    function escribirSimbolo() {
-      if (contador % 2 == 0) { // Si el contador es par, escribe una x
-        document.write('x');
-      } else { // Si el contador es impar, escribe una o
-        document.write('o');
-      }
-      contador++;
-    } 
-
-    
-// Creamos el tablero
-var tablero = [  ["", "", ""],
-                 ["", "", ""],
-                 ["", "", ""]
-];
-
-// Creamos los jugadores
-var jugador1 = {
-    simbolo: "+",
-    nombre: "Jugador 1"
-  };
-  var jugador2 = {
-    simbolo: "o",
-    nombre: "Jugador 2"
-  };
-
-// Alternar turnos
-var primerJugador = jugador1;
-
-// Función para marcar una casilla
-function marcarCasilla(caja) {
-  // Comprobar si la casilla está vacía
-  if (tablero[fila][columna] === "") {
-    // Marcar la casilla con el símbolo del jugador actual
-    tablero[fila][columna] = primerJugador.simbolo;
-    
-    // Comprobar si el jugador actual ha ganado el juego
-    if (comprobarVictoria(primerJugador)) {
-      alert(primerJugador.nombre + " ha ganado!");
-      // Permitir al usuario reiniciar el juego
-      reset();
-    } else {
-      // Cambiar al siguiente jugador
-      primerJugador = (primerJugador === jugador1) ? jugador2 : jugador1;
-    }
+var contador = 0;
+function escribirSimbolo(id) {
+  let elem = document.getElementById(id)
+  if (contador % 2 == 0) { // Si el contador es par, escribe una x
+    elem.innerHTML = 'x';
+  } else { // Si el contador es impar, escribe una o
+    elem.innerHTML = 'o';
   }
+  contador++;
 }
 
-// Función para comprobar si un jugador ha ganado el juego
-function comprobarJugador(jugador) {
-    // Comprobar las combinaciones ganadoras posibles
-    if (tablero[0][0] === jugador.simbolo && tablero[0][1] === jugador.simbolo && tablero[0][2] === jugador.simbolo) {
+
+window.addEventListener('DOMContentLoaded', () => {
+  const tiles = Array.from(document.querySelectorAll('.tile'));
+  const playerDisplay = document.querySelector('.display-player');
+  const resetButton = document.querySelector('#reset');
+  const announcer = document.querySelector('.announcer');
+
+  let board = ['', '', '', '', '', '', '', '', ''];
+  let currentPlayer = 'X';
+  let isGameActive = true;
+
+  const PLAYERX_WON = 'PLAYERX_WON';
+  const PLAYERO_WON = 'PLAYERO_WON';
+  const TIE = 'TIE';
+
+  const winningConditions = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+  ];
+
+  function handleResultValidation() {
+      let roundWon = false;
+      for (let i = 0; i <= 7; i++) {
+          const winCondition = winningConditions[i];
+          const a = board[winCondition[0]];
+          const b = board[winCondition[1]];
+          const c = board[winCondition[2]];
+          if (a === '' || b === '' || c === '') {
+              continue;
+          }
+          if (a === b && b === c) {
+              roundWon = true;
+              break;
+          }
+      }
+
+  if (roundWon) {
+          announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
+          isGameActive = false;
+          return;
+      }
+
+  if (!board.includes(''))
+      announce(TIE);
+  }
+
+  const announce = (type) => {
+      switch(type){
+          case PLAYERO_WON:
+              announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+              break;
+          case PLAYERX_WON:
+              announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+              break;
+          case TIE:
+              announcer.innerText = 'Tie';
+      }
+      announcer.classList.remove('hide');
+  };
+
+  const isValidAction = (tile) => {
+      if (tile.innerText === 'X' || tile.innerText === 'O'){
+          return false;
+      }
+
       return true;
-    } else if (tablero[1][0] === jugador.simbolo && tablero[1][1] === jugador.simbolo && tablero[1][2] === jugador.simbolo) {
-      return true;
-    } else if (tablero[2][0] === jugador.simbolo && tablero[2][1] === jugador.simbolo && tablero[2][2] === jugador.simbolo) {
-      return true;
-    } else if (tablero[0][0] === jugador.simbolo && tablero[1][0] === jugador.simbolo && tablero[2][0] === jugador.simbolo) {
-      return true;
-    }
-}
+  };
+
+  const updateBoard =  (index) => {
+      board[index] = currentPlayer;
+  }
+
+  const changePlayer = () => {
+      playerDisplay.classList.remove(`player${currentPlayer}`);
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      playerDisplay.innerText = currentPlayer;
+      playerDisplay.classList.add(`player${currentPlayer}`);
+  }
+
+  const userAction = (tile, index) => {
+      if(isValidAction(tile) && isGameActive) {
+          tile.innerText = currentPlayer;
+          tile.classList.add(`player${currentPlayer}`);
+          updateBoard(index);
+          handleResultValidation();
+          changePlayer();
+      }
+  }
+  
+  const resetBoard = () => {
+      board = ['', '', '', '', '', '', '', '', ''];
+      isGameActive = true;
+      announcer.classList.add('hide');
+
+      if (currentPlayer === 'O') {
+          changePlayer();
+      }
+
+      tiles.forEach(tile => {
+          tile.innerText = '';
+          tile.classList.remove('playerX');
+          tile.classList.remove('playerO');
+      });
+  }
+
+  tiles.forEach( (tile, index) => {
+      tile.addEventListener('click', () => userAction(tile, index));
+  });
+
+  resetButton.addEventListener('click', resetBoard);
+});
