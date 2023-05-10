@@ -5,8 +5,8 @@
 }
 #exterior {
     border-style:solid;
-    width:36vw;
-    height:80vh;
+    width:500px;
+    height:500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -21,7 +21,7 @@
     justify-content: center;
     flex-direction: row;
 }
-#caja1, #caja2, #caja3, #caja4, #caja5, #caja6, #caja7,#caja8, #caja9 {
+.caja {
     height: 150px;
     width: 150px;
     display: flex;
@@ -40,10 +40,18 @@
 
 .playerX {
     color: darkorange;
+	font-size: 100px;
+	margin-left: auto;
+    margin-right: auto;
+	align-items: center;
 }
 
 .playerO {
-    color: rebeccapurple;
+    color: greenyellow;
+	font-size: 100px;
+	margin-left: auto;
+    margin-right: auto;
+	align-items: center;
 }
 
 .controls {
@@ -68,4 +76,18 @@
 
 #reset {
     background-color: cornflowerblue;
+}
+.boton{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: darkorange;
+    border: none;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }

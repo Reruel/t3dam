@@ -12,39 +12,40 @@
     <section class="title">
         <h1>3 en raya (Tateti)</h1>
     </section>
-    <section class="display">
-        Empezamos por el jugador <span class="display-player playerX">x</span></section>
+    <section class="display" id ="displayInfo">
+        Empezamos por el jugador <span class="display-player playerX">x</span>
+	</section>
 
     <div id="exterior">
 
         <div class="fila">
-            <div id="caja1" onMouseEnter="pintar('#800080','caja1')" onMouseLeave="pintar('#fff','caja1')" 
+            <div class = "caja" id="caja1" onMouseEnter="pintar('#800080','caja1')" onMouseLeave="pintar('#fff','caja1')" 
             onclick="escribirSimbolo('caja1')"></div>
-            <div id="caja2" onMouseEnter="pintar('#800080','caja2')" onMouseLeave="pintar('#fff','caja2')"
+            <div class = "caja" id="caja2" onMouseEnter="pintar('#800080','caja2')" onMouseLeave="pintar('#fff','caja2')"
             onclick="escribirSimbolo('caja2')"></div>
-            <div id="caja3" onMouseEnter="pintar('#800080','caja3')" onMouseLeave="pintar('#fff','caja3')"
+            <div class = "caja" id="caja3" onMouseEnter="pintar('#800080','caja3')" onMouseLeave="pintar('#fff','caja3')"
             onclick="escribirSimbolo('caja3')"></div>
         </div>
         <div class="fila">
-            <div id="caja4" onMouseEnter="pintar('#800080','caja4')" onMouseLeave="pintar('#fff','caja4')"
+            <div class = "caja" id="caja4" onMouseEnter="pintar('#800080','caja4')" onMouseLeave="pintar('#fff','caja4')"
             onclick="escribirSimbolo('caja4')"></div>
-            <div id="caja5" onMouseEnter="pintar('#800080','caja5')" onMouseLeave="pintar('#fff','caja5')"
+            <div class = "caja" id="caja5" onMouseEnter="pintar('#800080','caja5')" onMouseLeave="pintar('#fff','caja5')"
             onclick="escribirSimbolo('caja5')"></div>
-            <div id="caja6" onMouseEnter="pintar('#800080','caja6')" onMouseLeave="pintar('#fff','caja6')"
+            <div class = "caja" id="caja6" onMouseEnter="pintar('#800080','caja6')" onMouseLeave="pintar('#fff','caja6')"
             onclick="escribirSimbolo('caja6')"></div>
         </div>
         <div class="fila">
-            <div id="caja7" onMouseEnter="pintar('#800080','caja7')" onMouseLeave="pintar('#fff','caja7')"
+            <div class = "caja" id="caja7" onMouseEnter="pintar('#800080','caja7')" onMouseLeave="pintar('#fff','caja7')"
             onclick="escribirSimbolo('caja7')"></div>
-            <div id="caja8" onMouseEnter="pintar('#800080','caja8')" onMouseLeave="pintar('#fff','caja8')"
+            <div class = "caja" id="caja8" onMouseEnter="pintar('#800080','caja8')" onMouseLeave="pintar('#fff','caja8')"
             onclick="escribirSimbolo('caja8')"></div>
-            <div id="caja9" onMouseEnter="pintar('#800080','caja9')" onMouseLeave="pintar('#fff','caja9')"
+            <div class = "caja" id="caja9" onMouseEnter="pintar('#800080','caja9')" onMouseLeave="pintar('#fff','caja9')"
             onclick="escribirSimbolo('caja9')"></div>
         </div>
     </div>
     <section class="display announcer hide"></section>
         <section class="controls">
-            <button id="reset">Jugar de nuevo</button>
+            <button id="reset" onclick="resetearTablero()">Jugar de nuevo</button>
         </section>
 
 

@@ -1,132 +1,135 @@
+var contador = 0;
+let board = ['', '', '', '', '', '', '', '', ''];
+let isGameActive = true;
+
 function pintar(col, caja) {
   document.getElementById(caja).style.backgroundColor = col;
 }
 
-var contador = 0;
 function escribirSimbolo(id) {
-  let elem = document.getElementById(id)
-  if (contador % 2 == 0) { // Si el contador es par, escribe una x
-    elem.innerHTML = 'x';
-  } else { // Si el contador es impar, escribe una o
-    elem.innerHTML = 'o';
-  }
-  contador++;
+	let elem = document.getElementById(id)
+	let elemDisplay = document.getElementById('displayInfo')
+	if (elem.innerHTML == "" && isGameActive){
+		if (contador % 2 == 0) { // Si el contador es par, escribe una X
+			elem.innerHTML = '<span class="display-player playerX">x</span>';
+			elemDisplay.innerHTML = 'Turno de <span class="display-player playerO">o</span>'
+		} else { // Si el contador es impar, escribe una O
+			elem.innerHTML = '<span class="display-player playerO">o</span>';
+			elemDisplay.innerHTML = 'Turno de <span class="display-player playerX">x</span>'
+		}
+		contador++;
+		switch(id){ //escribimos los valores en el array del tablero
+			case 'caja1':
+              board[0] = elem.innerHTML;
+              break;
+			case 'caja2':
+              board[1] = elem.innerHTML;
+              break;
+			case 'caja3':
+              board[2] = elem.innerHTML;
+              break;
+			case 'caja4':
+              board[3] = elem.innerHTML;
+              break;
+			case 'caja5':
+              board[4] = elem.innerHTML;
+              break;
+			case 'caja6':
+              board[5] = elem.innerHTML;
+              break;
+			case 'caja7':
+              board[6] = elem.innerHTML;
+              break;
+			case 'caja8':
+              board[7] = elem.innerHTML;
+              break;
+			case 'caja9':
+              board[8] = elem.innerHTML;
+              break;
+          
+		}
+	}
+	if(contador >= 3 ){ //a partir del tercer turno, alguien puede ganar, así que empezamos las comprobaciones
+		FUNCIONBASICA();
+	}
+}
+
+function resetearTablero() {
+  //reseteamos todo el html
+  let elem = document.getElementById('caja1');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja2');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja3');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja4');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja5');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja6');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja7');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja8');
+  elem.innerHTML = '';
+  elem = document.getElementById('caja9');
+  elem.innerHTML = '';
+  //reseteamos el contador
+  contador = 0;
+  //reseteamos el array del tablero
+  board = ['', '', '', '', '', '', '', '', ''];
+  
+  //resetamos el display de turno
+  elem = document.getElementById('displayInfo');
+  elem.innerHTML = 'Empezamos por el jugador <span class="display-player playerX">x</span>';
+  //reactivamos el juego
+  isGameActive = true;
 }
 
 
-window.addEventListener('DOMContentLoaded', () => {
-  const tiles = Array.from(document.querySelectorAll('.tile'));
-  const playerDisplay = document.querySelector('.display-player');
-  const resetButton = document.querySelector('#reset');
-  const announcer = document.querySelector('.announcer');
+function FUNCIONBASICA() {
+	
+	const winningConditions = [ //todas las posibles condiciones de victoria
+      [0, 1, 2], //horizontal 1
+      [3, 4, 5], //horizontal 2
+      [6, 7, 8], //horizontal 3
+      [0, 3, 6], //vertical 1
+      [1, 4, 7], //vertical 2
+      [2, 5, 8], //vertical 3
+      [0, 4, 8], //diagonal 1
+      [2, 4, 6]  //diagonal 2
+	];
 
-  let board = ['', '', '', '', '', '', '', '', ''];
-  let currentPlayer = 'X';
-  let isGameActive = true;
-
-  const PLAYERX_WON = 'PLAYERX_WON';
-  const PLAYERO_WON = 'PLAYERO_WON';
-  const TIE = 'TIE';
-
-  const winningConditions = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6]
-  ];
-
-  function handleResultValidation() {
-      let roundWon = false;
-      for (let i = 0; i <= 7; i++) {
-          const winCondition = winningConditions[i];
-          const a = board[winCondition[0]];
-          const b = board[winCondition[1]];
-          const c = board[winCondition[2]];
-          if (a === '' || b === '' || c === '') {
-              continue;
-          }
-          if (a === b && b === c) {
-              roundWon = true;
-              break;
-          }
-      }
-
-  if (roundWon) {
-          announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
-          isGameActive = false;
-          return;
-      }
-
-  if (!board.includes(''))
-      announce(TIE);
+  let roundWon = false;
+  for (let i = 0; i <= 7; i++) {
+	  const winCondition = winningConditions[i]; // array de 3 posiciones de victoria
+	  const a = board[winCondition[0]]; // valor en el tablero de la posición de victoria 0
+	  const b = board[winCondition[1]]; // valor en el tablero de la posición de victoria 1
+	  const c = board[winCondition[2]]; // valor en el tablero de la posición de victoria 2
+	  if (a === '' || b === '' || c === '') { // algo en la línea no tiene valor por lo que nadie ha cumplido la condición de victoria y pasamos a comprobar la siguiente
+		  continue;
+	  }
+	  if (a === b && b === c) { // toda la línea tiene el mismo valor, alguien ha ganado
+		  roundWon = true;
+		  break;
+	  }
   }
-
-  const announce = (type) => {
-      switch(type){
-          case PLAYERO_WON:
-              announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
-              break;
-          case PLAYERX_WON:
-              announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
-              break;
-          case TIE:
-              announcer.innerText = 'Tie';
-      }
-      announcer.classList.remove('hide');
-  };
-
-  const isValidAction = (tile) => {
-      if (tile.innerText === 'X' || tile.innerText === 'O'){
-          return false;
-      }
-
-      return true;
-  };
-
-  const updateBoard =  (index) => {
-      board[index] = currentPlayer;
-  }
-
-  const changePlayer = () => {
-      playerDisplay.classList.remove(`player${currentPlayer}`);
-      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-      playerDisplay.innerText = currentPlayer;
-      playerDisplay.classList.add(`player${currentPlayer}`);
-  }
-
-  const userAction = (tile, index) => {
-      if(isValidAction(tile) && isGameActive) {
-          tile.innerText = currentPlayer;
-          tile.classList.add(`player${currentPlayer}`);
-          updateBoard(index);
-          handleResultValidation();
-          changePlayer();
-      }
+ 
+  if (roundWon) { //alguien ha ganado
+	elem = document.getElementById('displayInfo')
+	if(contador % 2 == 0){ 	//al ser el turno de X y haber ganado alguien, ganó O
+		elem.innerHTML = 'Ganador el jugador <span class="display-player playerO">o</span>';
+		alert('Ganador el jugador o');
+	}else{ 					//al ser el turno de O y haber ganado alguien, ganó X
+		elem.innerHTML = 'Ganador el jugador <span class="display-player playerX">x</span>';
+		alert('Ganador el jugador x');
+	}
+	isGameActive = false; // se desactiva el juego
+  }else if (!board.includes('')){ //nadie ha ganado y no quedan huecos en el tablero
+	elem = document.getElementById('displayInfo');
+	elem.innerHTML = 'Empate';
+	alert('Empate');	
+	isGameActive = false; // se desactiva el juego
   }
   
-  const resetBoard = () => {
-      board = ['', '', '', '', '', '', '', '', ''];
-      isGameActive = true;
-      announcer.classList.add('hide');
-
-      if (currentPlayer === 'O') {
-          changePlayer();
-      }
-
-      tiles.forEach(tile => {
-          tile.innerText = '';
-          tile.classList.remove('playerX');
-          tile.classList.remove('playerO');
-      });
-  }
-
-  tiles.forEach( (tile, index) => {
-      tile.addEventListener('click', () => userAction(tile, index));
-  });
-
-  resetButton.addEventListener('click', resetBoard);
-});
+}
