@@ -8,10 +8,23 @@
     --colorFondoNoche:darkgray;
     --anchoIconoModo:50px;
     --modoGuardado:dia;
+    --fuenteNormal:14px;
+}
+p{
+    font-size:var(--fuenteNormal)+"px";
 }
 
+h3{
+    font-size:calc(1.2*var(--fuenteNormal))+"px";
+}
 
+h2{
+    font-size:calc(1.4*var(--fuenteNormal))+"px";
+ }
 
+h1{
+    font-size:calc(1.8*var(--fuenteNormal))+"px";
+}
 
 #todo {
     color:var(--colorFuente);

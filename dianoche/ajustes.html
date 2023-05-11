@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="ajustes">
+        <p>Elija un color</p><input type="color" name="colorElegido">
+        <select name="tamFuente">
+            <option value="12">Pequeña</option>
+            <option value="14">Mediana</option>
+            <option value="18">Grande</option>
+        </select>
+        <button type="button" onclick="aplicarCambios()">Aplicar</button>
+    </section>
+    <script>
+        function aplicarCambios(){
+            //mostramos en consola los valores recogidos en la página
+            var color=document.getElementByName("colorElegido")[0]; //esto también se puede expresar por elementById
+            console.log("color elegido "+ color.value);
+            var tam=document.getElementByName("tamFuente")[0];
+            console.log("tamaño de la fuente "+tam.value)
+            //aplicamos el color y el tamaño al parrafo inicial
+            var parrafo=document.getElementById("esteParrafo");
+            parrafo.style.fontSize=tam;
+            parrafo.style.color=color;
+        }
+    </script>
+</body>
+</html>
