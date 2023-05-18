@@ -1,0 +1,70 @@
+/* 
+para hacer los 5 divs distribuidos como un nro 5 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#pantalla {
+    margin: 2vh 2vw;
+    width: 96vw;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* pega en los extremos y centra el restante */
+}
+
+article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* los cuadros estarán horizontales */
+    justify-content: space-between;
+    /* pega en los extremos y centra el restante */
+    align-items: center;
+    /* los elementos se centran verticalmente */
+}
+
+#fc {
+    justify-content: center;
+    /* solo para la fila central */
+}
+
+div {
+    text-align: center;
+    font-size: larger;
+    color: white;
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* para ver los cuadros inicialmente */
+}
+
+#c1 {
+    background-color: #adff2f;
+}
+
+#c2 {
+    background-color: pink;
+}
+
+#c3 {
+    background-color: lightskyblue;
+}
+
+
+#c4 {
+    background-color: grey;
+}
+
+
+#c5 {
+    background-color: goldenrod;
+}
+

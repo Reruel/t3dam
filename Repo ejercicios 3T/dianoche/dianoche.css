@@ -1,0 +1,42 @@
+:root {
+    --colorFondo: yellow;
+    --colorFuente:green;
+    --colorFuenteDia: black;
+    --colorFondoDia: gainsboro;
+    --colorFuenteNoche:white;
+    --colorFondoNoche:darkgray;
+    --anchoIconoModo:50px;
+    --modoGuardado:dia;
+}
+
+#todo {
+    color:var(--colorFuente);
+    /* background-color:yellow; */
+    background-color:var(--colorFondo);
+}
+
+#zonaModo {
+    position:fixed;
+    top:10px;
+    right:10px;
+    width:var(--anchoIconoModo);
+    background-color:transparent;
+}
+
+#dia, #noche {
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+/* se inicializa por JS según valor de variable
+      --modoGuardado
+#dia {
+    display:none;
+}
+*/
+
+mark, span {
+    background-color:var(--colorFondo);
+}

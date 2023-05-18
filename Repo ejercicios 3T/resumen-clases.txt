@@ -1,0 +1,18 @@
+10-12 abril
+XAMPP. Explicación breve TCP-IP. Direcciones IP y puertos. Visualización en XAMPP de los puertos utilizados. Resolución de problemas de conflicto con IIS y MySql. Carpetas de inicio para publicación de Apache y de IIS.
+DAM: Resolución de problemas al usar phpmyadmin modificando el nombre del host en el fichero:
+c:/xampp/phpMyAdmin/config.inc.php
+
+
+11-13 de abril
+Resolución de problemas al usar phpmyadmin modificando el nombre del host en el fichero:
+c:/xampp/phpMyAdmin/config.inc.php
+
+github desktop - hacer un nuevo repo
+publicarlo
+commits
+hacemos 2 webs con un css compartido
+selectores css
+javascript
+mensaje por alert y por consola
+explicacion de cookies vs webstorage

@@ -1,0 +1,16 @@
+/* asignar los modos necesarios para cambiar los estilos de visualización */
+
+#cambioModo {
+    /* estilo necesario para que este elemento quede
+    pegado arriba a la derecha de la pantalla */
+}
+
+#luna {
+    display:block;
+    /* se muestra al inicio porque comienzo por defecto con el modo dia */
+}
+
+#sol {
+    display:none;
+    /* No se muestra al inicio porque comienzo por defecto con el modo dia */
+}

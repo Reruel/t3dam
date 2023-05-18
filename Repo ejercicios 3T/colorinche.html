@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- usamos los cuadros para cambiar el color y pintarlos, usando JS -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cuadricula.css"/>
+    <title>JS con display flex</title>
+</head>
+<body>
+    <main id="pantalla">
+        <!-- aquí inserto los 3 bloques verticales -->
+        <article>
+            <!-- aquí inserto los 2 cuadros vacíos de la fila superior
+            y los identifico para poder luego accederlos con JS -->
+            <div id="c1" onclick="saludar('1')" on="obtieneColor('1')">1</div>
+            <div id="c2" onclick="saludar('2')" oncontextmenu="obtieneColor('2')">2</div>
+        </article>
+        <article id="fc">
+            <!-- aquí inserto el cuadro vacío de la fila del medio
+            y lo identifico para poder luego accederlo con JS -->
+            <div id="c3" onclick="saludar('3')" oncontextmenu="obtieneColor('3')">3</div>
+        </article>
+        <article>
+            <!-- aquí inserto los 2 cuadros vacíos de la fila inferior
+            y los identifico para poder luego accederlos con JS -->
+            <div id="c4" onclick="saludar('4')" oncontextmenu="obtieneColor('4')">4</div>
+            <div id="c5" onclick="saludar('5')" oncontextmenu="obtieneColor('5')">5</div>
+        </article>
+    </main>
+    
+    <!-- puedes elegir alternativas de código para practicar -->
+    <script src="./flex3c.js"></script>    
+    
+</body>
+</html>

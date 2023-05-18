@@ -1,0 +1,12 @@
+:root {
+    --colorNormal:black;
+    font-size:1rem;
+    
+    /* ventajas del REM vs PX: funciona con el zoom
+    el navegador usa REM por defecto en 14 o 16 px dependiendo... */
+    
+}
+
+p, h1, h2, h3 {
+    color:var(--colorNormal);
+}

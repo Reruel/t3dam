@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fuentes.css">
+</head>
+
+<body>
+    <section id="ajustes">
+
+        <p id="esteParrafo">Elija un Color</p>
+        <input type="color" name="colorElegido" />
+        <br />
+
+        <p>Elija la fuente base del documento</p>
+        <select name="tamFuente">
+            <option value="0.8">Pequeña</option>
+            <option value="1.0" selected="selected">Mediana</option>
+            <option value="1.4">Grande</option>
+        </select>
+
+        <button type="button" onclick="aplicarCambios()">APLICAR</button>
+
+        <h1> GUÍA DE ESTILOS ELEGIDA (H1)</h2>
+            <h2>Titulo H2</h2>
+            <h3>Titulo H3</h3>
+            <p>Parrafo normal</p>
+            <p id="mensaje"></p>
+    </section>
+
+    <script>
+        function aplicarCambios() {
+            // mostramos en consola los valores recogidos en la pagina
+            var color = document.getElementsByName('colorElegido')[0];
+            console.log('color elegido ' + color.value);
+
+            var tam = document.getElementsByName('tamFuente')[0];
+            var tamelegido = tam[tam.selectedIndex].value;
+
+            // aplicamos el color y el tamaño a todo el documento
+            document.documentElement.style.fontSize = parseFloat(tamelegido) + "rem";
+            document.documentElement.style.setProperty("--colorNormal", color.value);
+            document.getElementById('mensaje').innerHTML = "APLICADO";
+
+        }
+    </script>
+
+</body>
+
+</html>

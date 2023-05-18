@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2023-05-03T12:28:32.566Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="kYTPILs7BKtnoodTf5lB" version="21.2.1" type="device">
+  <diagram name="Página-1" id="uIIgmr3KXgghbpjS0FMc">
+    <mxGraphModel dx="864" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lc8E71q1K3zPD8nc9mHi-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="80" width="540" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="lc8E71q1K3zPD8nc9mHi-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lc8E71q1K3zPD8nc9mHi-2" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="720" y="90" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lc8E71q1K3zPD8nc9mHi-3" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lc8E71q1K3zPD8nc9mHi-6" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;modos día/noche&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;HTML para LAYOUT&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;EL recuadro pequeño está en position STICKY respecto del body, y pegado al borde superior derecho.&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;Los iconos (elipses) están en position ABSOLUTE respecto del recuadro pequeño, pegados también al mismo ángulo.&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="470" height="250" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
