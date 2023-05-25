@@ -8,145 +8,288 @@ Curso: 1º DAM
     --primary: #5c5175;
     --white: #fff;
     --gray: #2a324b;
-    font-size:1rem;
+    --gold: #fce40f;
+    font-size: 1rem;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*bordes a todos los elementos*/
+    box-sizing: border-box;
+    /*bordes a todos los elementos*/
 }
 
 body {
-    font-family: sans-serif; /*para que sea fácil de leer*/
+    font-family: sans-serif;
+    /*para que sea fácil de leer*/
     font-weight: lighter;
     color: var(--white);
     background-color: var(--primary);
-    height: 100vh; /*para que mantenga la altura del espectro visible de la página*/
+    height: 100vh;
+    /*para que mantenga la altura del espectro visible de la página*/
     cursor: url(cursor.png), url(cursor.png), pointer;
-    
+
 }
 
 .nav {
-    border-bottom: 1px solid var(--gray); /*para ponerle un límite al nav cuando se esté abriendo y cerrando*/
+    border-bottom: 1px solid var(--gray);
+    /*para ponerle un límite al nav cuando se esté abriendo y cerrando*/
 }
 
 .nav_toggle {
-    position: absolute; /*así no se mueve de donde lo pongamos*/
-    cursor:pointer; /*aquí le decimos al usuario que debe dar click*/
-    margin: 0 1rem; /*esto es para que tenga espacios*/
-    right: 0; /*para que se cargue la página a la derecha totalmente*/
-    
+    position: absolute;
+    /*así no se mueve de donde lo pongamos*/
+    cursor: pointer;
+    /*aquí le decimos al usuario que debe dar click*/
+    margin: 0 1rem;
+    /*esto es para que tenga espacios*/
+    right: 0;
+    /*para que se cargue la página a la derecha totalmente*/
+
 }
+
 .seleccionable {
     cursor: url(paw24pngs/paw24-1.gif), auto;
-  -webkit-animation: cursor 400ms infinite;
-  animation: cursor 700ms infinite;
+    -webkit-animation: cursor 400ms infinite;
+    animation: cursor 700ms infinite;
 }
 
 @-webkit-keyframes cursor {
-  5% {cursor: url(paw24pngs/paw24-1.gif), auto;}
-  10% {cursor: url(paw24pngs/paw24-2.gif), auto;}
-  15% {cursor: url(paw24pngs/paw24-3.gif), auto;}
-  20% {cursor: url(paw24pngs/paw24-4.gif), auto;}
-  25% {cursor: url(paw24pngs/paw24-5.gif), auto;}
-  30% {cursor: url(paw24pngs/paw24-6.gif), auto;}
-  35% {cursor: url(paw24pngs/paw24-7.gif), auto;}
-  40% {cursor: url(paw24pngs/paw24-8.gif), auto;}
-  45% {cursor: url(paw24pngs/paw24-9.gif), auto;}
-  50% {cursor: url(paw24pngs/paw24-10.gif), auto;}
-  55% {cursor: url(paw24pngs/paw24-11.gif), auto;}
-  60% {cursor: url(paw24pngs/paw24-12.gif), auto;}
-  65% {cursor: url(paw24pngs/paw24-13.gif), auto;}
-  70% {cursor: url(paw24pngs/paw24-14.gif), auto;}
-  75% {cursor: url(paw24pngs/paw24-15.gif), auto;}
-  80% {cursor: url(paw24pngs/paw24-16.gif), auto;}
-  85% {cursor: url(paw24pngs/paw24-17.gif), auto;}
-  90% {cursor: url(paw24pngs/paw24-18.gif), auto;}
-  95% {cursor: url(paw24pngs/paw24-19.gif), auto;}
-  100% {cursor: url(paw24pngs/paw24-20.gif), auto;}
-} 
+    5% {
+        cursor: url(paw24pngs/paw24-1.gif), auto;
+    }
+
+    10% {
+        cursor: url(paw24pngs/paw24-2.gif), auto;
+    }
+
+    15% {
+        cursor: url(paw24pngs/paw24-3.gif), auto;
+    }
+
+    20% {
+        cursor: url(paw24pngs/paw24-4.gif), auto;
+    }
+
+    25% {
+        cursor: url(paw24pngs/paw24-5.gif), auto;
+    }
+
+    30% {
+        cursor: url(paw24pngs/paw24-6.gif), auto;
+    }
+
+    35% {
+        cursor: url(paw24pngs/paw24-7.gif), auto;
+    }
+
+    40% {
+        cursor: url(paw24pngs/paw24-8.gif), auto;
+    }
+
+    45% {
+        cursor: url(paw24pngs/paw24-9.gif), auto;
+    }
+
+    50% {
+        cursor: url(paw24pngs/paw24-10.gif), auto;
+    }
+
+    55% {
+        cursor: url(paw24pngs/paw24-11.gif), auto;
+    }
+
+    60% {
+        cursor: url(paw24pngs/paw24-12.gif), auto;
+    }
+
+    65% {
+        cursor: url(paw24pngs/paw24-13.gif), auto;
+    }
+
+    70% {
+        cursor: url(paw24pngs/paw24-14.gif), auto;
+    }
+
+    75% {
+        cursor: url(paw24pngs/paw24-15.gif), auto;
+    }
+
+    80% {
+        cursor: url(paw24pngs/paw24-16.gif), auto;
+    }
+
+    85% {
+        cursor: url(paw24pngs/paw24-17.gif), auto;
+    }
+
+    90% {
+        cursor: url(paw24pngs/paw24-18.gif), auto;
+    }
+
+    95% {
+        cursor: url(paw24pngs/paw24-19.gif), auto;
+    }
+
+    100% {
+        cursor: url(paw24pngs/paw24-20.gif), auto;
+    }
+}
 
 @keyframes cursor {
-    5% {cursor: url(paw24pngs/paw24-1.gif), auto;}
-    10% {cursor: url(paw24pngs/paw24-2.gif), auto;}
-    15% {cursor: url(paw24pngs/paw24-3.gif), auto;}
-    20% {cursor: url(paw24pngs/paw24-4.gif), auto;}
-    25% {cursor: url(paw24pngs/paw24-5.gif), auto;}
-    30% {cursor: url(paw24pngs/paw24-6.gif), auto;}
-    35% {cursor: url(paw24pngs/paw24-7.gif), auto;}
-    40% {cursor: url(paw24pngs/paw24-8.gif), auto;}
-    45% {cursor: url(paw24pngs/paw24-9.gif), auto;}
-    50% {cursor: url(paw24pngs/paw24-10.gif), auto;}
-    55% {cursor: url(paw24pngs/paw24-11.gif), auto;}
-    60% {cursor: url(paw24pngs/paw24-12.gif), auto;}
-    65% {cursor: url(paw24pngs/paw24-13.gif), auto;}
-    70% {cursor: url(paw24pngs/paw24-14.gif), auto;}
-    75% {cursor: url(paw24pngs/paw24-15.gif), auto;}
-    80% {cursor: url(paw24pngs/paw24-16.gif), auto;}
-    85% {cursor: url(paw24pngs/paw24-17.gif), auto;}
-    90% {cursor: url(paw24pngs/paw24-18.gif), auto;}
-    95% {cursor: url(paw24pngs/paw24-19.gif), auto;}
-    100% {cursor: url(paw24pngs/paw24-20.gif), auto;}
+    5% {
+        cursor: url(paw24pngs/paw24-1.gif), auto;
+    }
+
+    10% {
+        cursor: url(paw24pngs/paw24-2.gif), auto;
+    }
+
+    15% {
+        cursor: url(paw24pngs/paw24-3.gif), auto;
+    }
+
+    20% {
+        cursor: url(paw24pngs/paw24-4.gif), auto;
+    }
+
+    25% {
+        cursor: url(paw24pngs/paw24-5.gif), auto;
+    }
+
+    30% {
+        cursor: url(paw24pngs/paw24-6.gif), auto;
+    }
+
+    35% {
+        cursor: url(paw24pngs/paw24-7.gif), auto;
+    }
+
+    40% {
+        cursor: url(paw24pngs/paw24-8.gif), auto;
+    }
+
+    45% {
+        cursor: url(paw24pngs/paw24-9.gif), auto;
+    }
+
+    50% {
+        cursor: url(paw24pngs/paw24-10.gif), auto;
+    }
+
+    55% {
+        cursor: url(paw24pngs/paw24-11.gif), auto;
+    }
+
+    60% {
+        cursor: url(paw24pngs/paw24-12.gif), auto;
+    }
+
+    65% {
+        cursor: url(paw24pngs/paw24-13.gif), auto;
+    }
+
+    70% {
+        cursor: url(paw24pngs/paw24-14.gif), auto;
+    }
+
+    75% {
+        cursor: url(paw24pngs/paw24-15.gif), auto;
+    }
+
+    80% {
+        cursor: url(paw24pngs/paw24-16.gif), auto;
+    }
+
+    85% {
+        cursor: url(paw24pngs/paw24-17.gif), auto;
+    }
+
+    90% {
+        cursor: url(paw24pngs/paw24-18.gif), auto;
+    }
+
+    95% {
+        cursor: url(paw24pngs/paw24-19.gif), auto;
+    }
+
+    100% {
+        cursor: url(paw24pngs/paw24-20.gif), auto;
+    }
 }
-    
+
 
 .nav_toggle svg {
     width: 1rem;
-    fill: var(--white); /*es la propiedad que nos permite cambiar el color de los svg*/
+    fill: var(--white);
+    /*es la propiedad que nos permite cambiar el color de los svg*/
 }
 
 .nav_toggle .close {
-    display: none; /*esto es porque no queremos que se vea en la vista de móvil*/
+    display: none;
+    /*esto es porque no queremos que se vea en la vista de móvil*/
 }
 
 .nav_toggle .close,
 .nav_toggle .menu {
-    margin-top: 0.3rem; /*así está un poco separado de arriba*/
+    margin-top: 0.3rem;
+    /*así está un poco separado de arriba*/
 }
 
 .nav_menu {
-    display: flex; /*así podemos modificar su posición*/
-    flex-direction: column; /*así lo vemos vertical*/
+    display: flex;
+    /*así podemos modificar su posición*/
+    flex-direction: column;
+    /*así lo vemos vertical*/
     gap: 2rem;
     align-items: center;
-    margin: 1rem; /*separación entre elementos*/
+    margin: 1rem;
+    /*separación entre elementos*/
 }
 
 .nav_menu li {
-    list-style-type: none; /*esto es para que se le quiten los circulitos de la lista*/
-    display: none; /*esto lo ponemos porque no queremos verlo hasta que activemos el checkbox*/
+    list-style-type: none;
+    /*esto es para que se le quiten los circulitos de la lista*/
+    display: none;
+    /*esto lo ponemos porque no queremos verlo hasta que activemos el checkbox*/
 }
 
 .nav_menu li:first-child {
-    margin-right: auto; /*así se posiciona arriba*/
-    display:block; /*así está siempre visible*/
+    margin-right: auto;
+    /*así se posiciona arriba*/
+    display: block;
+    /*así está siempre visible*/
 }
 
 .nav_menu li {
     text-decoration: none;
-    color: inherit; /*así hereda el color del padre*/
+    color: inherit;
+    /*así hereda el color del padre*/
     font-size: 1.1rem;
 }
 
 .menu_logo {
-    height: 30px; /*tamaño del logo*/
+    height: 30px;
+    /*tamaño del logo*/
 }
 
 .menu_logo img {
-    height: 100%; 
+    height: 100%;
 }
 
-#nav_checkbox:checked ~ ul.nav_menu li { /*esta propiedad nos ayuda a ver si están validados o no, como un if de css*/
-    display:block; /*si está marcado para que se vea*/
+#nav_checkbox:checked~ul.nav_menu li {
+    /*esta propiedad nos ayuda a ver si están validados o no, como un if de css*/
+    display: block;
+    /*si está marcado para que se vea*/
 }
 
-#nav_checkbox:checked ~ label.nav_toggle .close { 
-    display:block;
+#nav_checkbox:checked~label.nav_toggle .close {
+    display: block;
 }
 
-#nav_checkbox:checked ~ label.nav_toggle .menu { /*la hamburguesita*/
-    display:none;
+#nav_checkbox:checked~label.nav_toggle .menu {
+    /*la hamburguesita*/
+    display: none;
 }
 
 a {
@@ -154,9 +297,18 @@ a {
     text-decoration: none;
 }
 
-p, h1, h2, h3 {
-        color:var(--white);
+p,
+h1,
+h2,
+h3 {
+    color: var(--white);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
 }
+
 
 #modal {
     background: rgba(44, 42, 42, 0.9);
@@ -189,17 +341,20 @@ p, h1, h2, h3 {
 
 #mostrar-modal+label {
     text-decoration: none;
-    color: inherit; /*así hereda el color del padre*/
+    color: inherit;
+    /*así hereda el color del padre*/
     font-size: 1.1rem;
 }
 
 #mostrar-modal:checked~#modal {
     top: 0;
 }
+
 #cerrar-modal {
     display: none;
-  }
-  #cerrar-modal + label {
+}
+
+#cerrar-modal+label {
     position: absolute;
     top: 1em;
     right: 1em;
@@ -214,29 +369,43 @@ p, h1, h2, h3 {
     text-align: center;
     border-radius: 50%;
     transition: all .5s;
-  }
-  #cerrar-modal:checked ~ #modal {
+}
+
+#cerrar-modal:checked~#modal {
     top: -100vh;
-  }
-  #cerrar-modal + label {
+}
+
+#cerrar-modal+label {
     display: none;
-  }
-  #mostrar-modal:checked ~ #cerrar-modal + label {
+}
+
+#mostrar-modal:checked~#cerrar-modal+label {
     display: block;
-  }
-  #cerrar-modal:checked + label {
+}
+
+#cerrar-modal:checked+label {
     display: none;
-  }
+}
+
+#columna {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
 
 /*aplicamos los media querys para que cambie cuando estamos en escritorio. De esta forma tenemos un menú responsive*/
 @media only screen and (min-width: 560px) {
     .nav_toggle {
         display: none
     }
+
     .nav_menu {
-        flex-direction: row; /*así se ve de forma horizontal*/
+        flex-direction: row;
+        /*así se ve de forma horizontal*/
     }
+
     .nav_menu li {
-        display: block; 
+        display: block;
     }
 }
