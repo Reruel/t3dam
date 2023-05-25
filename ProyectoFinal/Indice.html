@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,35 @@
     <title>Reyes Rubio Elena. T3. 1DAM CENEC</title>
     <link rel="stylesheet" href="./Estilos.css">
 </head>
+
 <body>
     <nav class="nav">
-        <input type="checkbox" name="" id="nav_checkbox" class="nav_checkbox">
-        <label for="nav_checkbox" class="nav_toggle"></label>Icono
         <ul class="nav_menu">
             <li class="menu_logo">
-                <img src="" alt="">MI SITIO WEB
+                <img src="Mega-Banette.png" alt="">PORTFOLIO REYES R.E.
             </li>
-            <li><a href="https://wpreyes.000webhostapp.com/">Blog de Cenec</a></li>
-            <li onclick="parent.location='EjTaTeTi.html'">¿Aburrido?</li>
-            <li onclick="alert('Estoy haciendo el botón ajustes')">Ajustes
-            <li onclick="alert('-Modificación del cursor base\n-Zarpa gatuna en los elementos li \n-Diseño de menú estilo wordpress\n-Uso indistinto de elementos html y javascript')">Detalles evaluables para el profesor</li>
+            <li><a class="seleccionable" href="https://wpreyes.000webhostapp.com/">Blog de Cenec</a></li>
+            <li><a class="seleccionable" href="https://reruel.github.io/Publico/EjercicioXML/dreamOn.xml">XML</a></li>
+            <li class="seleccionable" onclick="parent.location='EjTaTeTi.html'">¿Aburrido?</li>
+            <li class="seleccionable" onclick="parent.location='ajustes.html'">Ajustes</li>
+            <li>
+                <input id="mostrar-modal" name="modal" type="radio" />
+                <label for="mostrar-modal" class="seleccionable"> Modal </label>
+                <input id="cerrar-modal" name="modal" type="radio" />
+                <label for="cerrar-modal"> X </label>
+                <div id="modal">
+                    <p>Reyes Rubio Elena<br />1ºDAM<br />Proyecto fin trimestre/año. Sitio web</p>
+                    <p>-Modificación del cursor base
+                    <br />-Zarpa gatuna en los elementos seleccionables
+                    <br />-Diseño de menú estilo wordpress
+                    <br />-Uso indistinto de elementos html y javascript</p>
+            
+                </div>
             </li>
-
         </ul>
     </nav>
+    </div>
+
 </body>
+
 </html>

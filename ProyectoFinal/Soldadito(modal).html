@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./paso6(modal).css">
+</head>
+
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GxQjx7FkmNA?rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <input id="mostrar-modal" name="modal" type="radio" />
+    <label for="mostrar-modal"> Modal </label>
+    <input id="cerrar-modal" name="modal" type="radio" />
+    <label for="cerrar-modal"> X </label>
+    <div id="modal">
+        <p>¿Te ha gustado?<br/><br/><br/><br/><a href=https://www.youtube.com/channel/UCAQZ4iOfUvCQmgtd_a69N9w>Clicka aquí para acceder al canal de youtube y conocer más contenido de la banda</a></p> 
+        
+    </div>
+
+    <div>
+        <p>Él camina despacito que las prisas no son buenas</p>
+        <p>En su brazo dobladita, con cuidado la chaqueta</p>
+        <p>Luego pasa por la calle dónde los chavales juegan</p>
+        <p>Él también quiso ser niño pero le pilló la guerra</p>
+    </div>
+    <div>
+        <p>Soldadito marinero conociste a una sirena</p>
+        <p>De esas que dicen te quiero si ven la cartera llena</p>
+        <p>Escogiste a la más guapa y a la menos buena</p>
+        <p>Sin saber como ha venido te ha cogido la tormenta</p>
+    </div>
+    <div>
+        <p>Él quería cruzar los mares y olvidar a su sirena</p>
+        <p>La verdad, no fue difícil cuando conoció a Mariela</p>
+        <p>Que tenía los ojos verdes y un negocio entre las piernas</p>
+        <p>Hay que ver que puntería, no te arrimas a una buena</p>
+    </div>
+    <div>
+        <p>Soldadito marinero conociste a una sirena</p>
+        <p>De esas que dicen te quiero si ven la cartera llena</p>
+        <p>Escogiste la más guapa y a la menos buena</p>
+        <p>Sin saber como ha venido te ha cogido la tormenta</p>
+    </div>
+    <div>
+        <p>Después de un invierno malo, una mala primavera
+        <p>Dime por que estas buscando una lágrima en la arena
+        <p>Después de un invierno malo</p>
+
+    </div>
+
+
+    <!-- aquí van los dos botones que usaré para mostrar u ocultar la oferta -->
+    <input id="ver" type="button" onclick="mostrar()" value="+ INFO" />
+    <input id="ocultar" type="button" onclick="ocultar()" value="OCULTAR" />
+
+    <div id="oferta">
+        <p>Fuente: letras.com<br />
+            Autor: Fito y fitipaldis
+        </p>
+    </div>
+
+    <script>
+        function ocultar() {
+            /* oculto la oferta */
+            document.getElementById("oferta").style.display = "none";
+
+            /* muestro el botón para volver a ver la oferta */
+            document.getElementById("ver").style.display = "inline-block";
+
+            /* oculto este botón */
+            document.getElementById("ocultar").style.display = "none";
+
+            return;
+        }
+
+        function mostrar() {
+            document.getElementById("oferta").style.display = "table";
+
+            /* muestro el botón para ocultar la oferta */
+            document.getElementById("ocultar").style.display = "inline-block";
+
+            /* oculto este botón */
+            document.getElementById("ver").style.display = "none";
+
+            return;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

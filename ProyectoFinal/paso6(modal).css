@@ -1,0 +1,168 @@
+/* Separar el css del html (copiar fuera el interior del style y borrar la etiqueta en el html)
+Autor: Reyes Rubio
+1º DAM
+*/
+body {
+    background-color: rgb(121, 197, 211);
+}
+
+
+p {
+    line-height: 12px;
+}
+
+div {
+    line-height: 36px;
+}
+
+/* Paso 2: Señalar los div.
+*/
+div:hover {
+    background-color: rgb(20, 140, 156);
+}
+
+/* Paso 3: Duplicamos el tamaño de la primera letra de cada estrofa.
+*/
+div::first-letter {
+    font-size: 2em;
+}
+
+/* Paso 4: Hacer zoom de 1.2 al párrafo sobre el que pinchemos. Este es otra forma de conseguir el 4.
+*/
+
+    /* Paso 5: Ponemos en el html un párrafo inmediatamete debajo del título con visibility:none para que no se vea que
+diga: Fito&Los Fitipaldis
+*/
+
+
+body>p:nth-child(2) {
+    visibility: hidden;
+}
+
+/* Paso 6: (cuando pinchemos en el título de la canción, usando:target, veremos el autor, en cursivas, centrado y subrayado. 
+Es necesario también modificar el html.
+*/
+body>p:target {
+    visibility: visible;
+    font-style: italic;
+    /* cursivas */
+    text-align: center;
+    /* centrado*/
+    text-decoration: underline;
+    /*subrayado*/
+}
+
+
+#oferta {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    display: none;
+}
+
+#oferta p {
+    display: table-cell;
+    color: blue;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#ver {
+    display: block;
+}
+
+#ocultar {
+    display: none;
+}
+
+#modal {
+    background: rgba(44, 42, 42, 0.9);
+    color: #fff;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all .4s;
+}
+
+#modal p {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#mostrar-modal {
+    display: none;
+}
+
+#mostrar-modal+label {
+    background: rgb(177, 122, 60);
+    display: table;
+    margin: auto;
+    color: #fff;
+    line-height: 3;
+    padding: 0 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#mostrar-modal+label:hover {
+    background: rgb(77, 58, 38);
+}
+
+#mostrar-modal:checked~#modal {
+    top: 0;
+}
+#cerrar-modal {
+    display: none;
+  }
+  #cerrar-modal + label {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 100;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: tomato;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+  #cerrar-modal:checked ~ #modal {
+    top: -100vh;
+  }
+  #cerrar-modal + label {
+    display: none;
+  }
+  #mostrar-modal:checked ~ #cerrar-modal + label {
+    display: block;
+  }
+  #cerrar-modal:checked + label {
+    display: none;
+  }
+  #link {
+    color: rgb(59, 199, 199);
+  }
+  a {
+    text-decoration: none;
+    color:white;
+  }
