@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Estilos.css">
+    
 </head>
 
-<body>
+<body onload="setupInicial()">
+    <script src="Ajustes.js"></script>
     <section id="ajustes">
 
         <p id="esteParrafo">Elija un Color</p>
@@ -31,26 +33,6 @@
             <p>Parrafo normal</p>
             <p id="mensaje"></p>
     </section>
-
-    <script>
-
-    
-
-        function aplicarCambios() {
-            // mostramos en consola los valores recogidos en la pagina
-            var color = document.getElementsByName('colorElegido')[0];
-            console.log('color elegido ' + color.value);
-
-            var tam = document.getElementsByName('tamFuente')[0];
-            var tamelegido = tam[tam.selectedIndex].value;
-
-            // aplicamos el color y el tamaño a todo el documento
-            document.documentElement.style.fontSize = parseFloat(tamelegido) + "rem";
-            document.documentElement.style.setProperty("--white", color.value);
-            document.getElementById('mensaje').innerHTML = "APLICADO";
-
-        }
-    </script>
 
 </body>
 

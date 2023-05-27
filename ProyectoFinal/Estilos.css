@@ -250,7 +250,7 @@ body {
     /*así podemos modificar su posición*/
     flex-direction: column;
     /*así lo vemos vertical*/
-
+    gap: 2rem;
     align-items: center;
     margin: 1rem;
     /*separación entre elementos*/
