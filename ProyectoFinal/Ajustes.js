@@ -11,8 +11,8 @@ function aplicarCambios() {
     document.documentElement.style.setProperty("--white", color.value);
     document.getElementById('mensaje').innerHTML = "APLICADO";
     if (typeof (Storage) !== "undefined") {
-        localStorage.colorElegido = color;
-        localStorage.tamElegido = tamelegido;
+        localStorage.colorElegido = color.value;
+        localStorage.tamElegido = parseFloat(tamelegido);
     } else {
         alert("Sorry, your browser does not support web storage...");
     }
@@ -21,11 +21,36 @@ function aplicarCambios() {
 function setupInicial() {
     if (typeof (Storage) !== "undefined") {
         if (localStorage.colorElegido) {
-            document.documentElement.style.setProperty("--white", localStorage.colorElegido.value);
+            document.documentElement.style.setProperty("--white", localStorage.colorElegido);
         }
         if (localStorage.tamElegido) {
-            document.documentElement.style.fontSize = parseFloat(localStorage.tamElegido) + "rem";
+            document.documentElement.style.fontSize = localStorage.tamElegido + "rem";
         }
+    } else {
+        alert("Sorry, your browser does not support web storage...");
+    }
+}
+
+function resetAjustes() {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.clear();        
+    } else {
+        alert("Sorry, your browser does not support web storage...");
+    }
+}
+
+function aplicarNombre() {
+    if (typeof (Storage) !== "undefined") {
+        sessionStorage.nombreUsuario = document.getElementById('name').innerHTML; 
+        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;         
+    } else {
+        alert("Sorry, your browser does not support web storage...");
+    }
+}
+
+function setupNombre() {
+    if (typeof (Storage) !== "undefined") {
+        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;       
     } else {
         alert("Sorry, your browser does not support web storage...");
     }
