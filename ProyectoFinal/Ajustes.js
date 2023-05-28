@@ -33,7 +33,7 @@ function setupInicial() {
 
 function resetAjustes() {
     if (typeof (Storage) !== "undefined") {
-        localStorage.clear();        
+        localStorage.clear();
     } else {
         alert("Sorry, your browser does not support web storage...");
     }
@@ -41,8 +41,8 @@ function resetAjustes() {
 
 function aplicarNombre() {
     if (typeof (Storage) !== "undefined") {
-        sessionStorage.nombreUsuario = document.getElementById('name').value; 
-        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;         
+        sessionStorage.nombreUsuario = document.getElementById('name').value;
+        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;
     } else {
         alert("Sorry, your browser does not support web storage...");
     }
@@ -50,7 +50,7 @@ function aplicarNombre() {
 
 function setupNombre() {
     if (typeof (Storage) !== "undefined") {
-        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;       
+        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;
     } else {
         alert("Sorry, your browser does not support web storage...");
     }

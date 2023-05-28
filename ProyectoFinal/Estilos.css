@@ -27,20 +27,20 @@ body {
     height: 100vh;
     /*para que mantenga la altura del espectro visible de la página*/
     cursor: url(cursor.png), url(cursor.png), pointer;
-    
-      
+
+
 }
 
 #fondo {
     background-image: url('EspeonGrande.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: 100% 100%;   
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 .nav {
     border-bottom: 1px solid var(--gray);
-    position:sticky;
+    position: sticky;
     top: 16px;
     /*para ponerle un límite al nav cuando se esté abriendo y cerrando*/
 }
@@ -261,7 +261,7 @@ body {
     /*esto es para que se le quiten los circulitos de la lista*/
     display: none;
     /*esto lo ponemos porque no queremos verlo hasta que activemos el checkbox*/
-    
+
 }
 
 .nav_menu li:first-child {
