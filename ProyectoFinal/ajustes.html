@@ -13,30 +13,38 @@
 <body onload="setupInicial()">
     <script src="Ajustes.js"></script>
     <section id="ajustes">
+        <br>
+        <label for="colorElegido">Elija un Color</label>
+        <input type="color" name="colorElegido">
+        <br>
+        <br>
 
-        <p id="esteParrafo">Elija un Color</p>
-        <input type="color" name="colorElegido" />
-        <br />
-
-        <p>Elija la fuente base del documento</p>
+        <label for="tamFuente">Elija la fuente base del documento:</label>
         <select name="tamFuente">
             <option value="0.8">Pequeña</option>
             <option value="1.0" selected="selected">Mediana</option>
             <option value="1.4">Grande</option>
         </select>
+        <br>
+        <br>
 
         <button type="button" onclick="aplicarCambios()">APLICAR AJUSTES</button>
         <button type="button" onclick="resetAjustes()">RESET AJUSTES</button>
+        <br>
+        <br>
+
         <label for="name">Escribe tu nombre:</label>
         <input type="text" id="name" name="name" value="">
+        <br>
+        <br>
 
-        <h1> GUÍA DE ESTILOS ELEGIDA (H1)</h2>
+        <button type="button" onclick="aplicarNombre()">IDENTIFICARSE</button>
+
+        <h1> GUÍA DE ESTILOS ELEGIDA (H1)</h1>
             <h2>Titulo H2</h2>
             <h3>Titulo H3</h3>
             <p>Parrafo normal</p>
             <p id="mensaje"></p>
     </section>
 
-</body>
-
-</html>
+</body></html>

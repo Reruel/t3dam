@@ -7,8 +7,8 @@ Curso: 1º DAM
 :root {
     --primary: #5c5175;
     --white: #fff;
-    --gray: #2a324b;
-    --gold: #fce40f;
+    --gray: #a6a7ab;
+    --red: #fc0f0f;
     font-size: 1rem;
 }
 
@@ -316,9 +316,7 @@ h3 {
     padding-right: 3%;
     padding-top: 3%;
     padding-bottom: 3%;
-
 }
-
 
 #modal {
     background: rgba(44, 42, 42, 0.9);
@@ -372,7 +370,7 @@ h3 {
     color: #fff;
     font-weight: bold;
     cursor: pointer;
-    background: rgb(255, 212, 71);
+    background: var(--red);
     width: 25px;
     height: 25px;
     line-height: 25px;
@@ -402,6 +400,13 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
+}
+
+#idUsuario {
+    color: var(--white);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
 
 /*aplicamos los media querys para que cambie cuando estamos en escritorio. De esta forma tenemos un menú responsive*/

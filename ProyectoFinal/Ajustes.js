@@ -42,7 +42,7 @@ function resetAjustes() {
 function aplicarNombre() {
     if (typeof (Storage) !== "undefined") {
         sessionStorage.nombreUsuario = document.getElementById('name').innerHTML; 
-        document.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;         
+        window.parent.getElementById('idUsuario').innerHTML = sessionStorage.nombreUsuario;         
     } else {
         alert("Sorry, your browser does not support web storage...");
     }
