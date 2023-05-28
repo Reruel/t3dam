@@ -307,9 +307,17 @@ a {
     text-decoration: none;
 }
 
-p,
 h1,
-h2,
+h2 {
+    color:var(--primary);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+p,
 h3 {
     color: var(--white);
     padding-left: 3%;
@@ -333,13 +341,9 @@ h3 {
 
 #modal p {
     width: 60%;
-    height: 40%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    height: 60%;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -393,13 +397,7 @@ h3 {
 
 #cerrar-modal:checked+label {
     display: none;
-}
 
-#columna {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
 }
 
 #idUsuario {
