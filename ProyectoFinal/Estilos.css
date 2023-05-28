@@ -38,10 +38,11 @@ body {
     background-size: 100% 100%;
 }
 
-.nav {
+.nav { 
     border-bottom: 1px solid var(--gray);
-    position: sticky;
-    top: 16px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
     /*para ponerle un límite al nav cuando se esté abriendo y cerrando*/
 }
 
