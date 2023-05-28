@@ -309,7 +309,7 @@ a {
 
 h1,
 h2 {
-    color:var(--primary);
+    color: var(--primary);
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 3%;
